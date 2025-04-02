@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Desktop Valuation and Pricing Plans</title>
+    <title>Simple Html Page</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         /* General Styles */
         body {
-            background-color: black;
+            /* background-color: black; */
             color: white;
             font-family: Arial, sans-serif;
         }
@@ -209,11 +209,307 @@
     right: 2%;
     position: absolute;
         }
+        /* third section css */
+        .step-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .step-circle.active {
+      background-color: white;
+      color: black;
+    }
+    .step-circle.inactive {
+      border: 2px solid white;
+      color: black;
+    }
+    .step-circle.ml-2 {
+      margin-left: 10px;
+    }
+    .tablet-frame {
+      width: 100%;
+      max-width: 350px;
+      height: 440px;
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #FF0000;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+/* footer css */
+        .footer {
+            color: white;
+        }
+        .footer a {
+            color: white;
+        }
+        .footer .border-red {
+            border-bottom: 2px solid red;
+            width: 50px;
+            margin-bottom: 1rem;
+        }
+        .footer .social-icons a {
+            color: white;
+            margin-right: 1rem;
+        }
+        .footer .social-icons a:last-child {
+            margin-right: 0;
+        }
+        .footer .copyright {
+            padding-top: 1rem;
+            text-align: left;
+        }
+
+        /* Eighth section */
+        .title {
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .card_pink {
+            background-color: #bd4343;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+        .card_pink_content {
+            display: flex;
+            align-items: center;
+        }
+        .number {
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 2px dashed white;
+            margin-right: 1rem;
+            position: absolute;
+    top: 35%;
+    left: -3.5%;
+        }
+        .text-content {
+            text-align: left;
+        }
+        .question {
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .question i {
+            margin-right: 0.5rem;
+        }
+        .solution {
+            background-color: #872525;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .solution i {
+            margin-right: 0.5rem;
+        }
+        .dots {
+            margin-top: 1rem;
+            color: white;
+            font-size: 1.25rem;
+        }
     </style>
 </head>
 
 <body>
-    <!-- fifth Section -->
+
+    <!-- Fourth Section -->
+    <div class="container-fluid py-5" style="background-color: #d9d9d9;">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                <div class="col-sm-4 py-3">
+                    <div class="">
+                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
+                        <p class="text-dark">Comprehensive Valuation report - downloadable in pdf format</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="">
+                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
+                        <p class="text-dark">Comparable projects from our primary and secondary data</p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="">
+                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
+                        <p class="text-dark">Guideline Values (for Maharashtra, Telangana and Karnataka)</p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="">
+                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
+                        <p class="text-dark">PCR - Price Correction Risk Analytics</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="">
+                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
+                        <p class="text-dark">Catchment Market Dynamics covering trends of demand, supply, price, month inventory & sales velocity</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 py-3" style="place-content: center;">
+                    <div class="">
+                        <button class="btn btn-danger rounded-4">Click Now</button>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            <div class="col-md-4 m-auto">
+                <div class="mt-5 text-center text-lg-start">
+                    <p class="text-dark fs-4">Not just a price estimate but a professional valuation report</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Fifth Section -->
+    <div class="container-fluid bg-danger py-5 ">
+        <div class="row">
+          <!-- Left Side Text Section -->
+          <div class="col-12 col-lg-5 col-md-12 m-auto">
+            <h1 class="text-white">How Desktop<br>Valuation Works?</h1>
+          </div>
+    
+          <!-- Right Side Image and Step Section -->
+          <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+              
+              <!-- Image Section -->
+              <div class="tablet-frame mb-4 mb-md-0">
+                <img alt="A tall building with multiple floors and a cityscape in the background" class="w-100 h-100 object-cover rounded-lg" src="https://storage.googleapis.com/a1aa/image/Og7Su1dAI2tL6eEWzt6PlHLXI-DcXv5ihG63g4Vf0hA.jpg" />
+                <div class="play-button">
+                 <i class="fas fa-play"></i>
+                </div>
+              </div>
+    
+              <!-- Steps Section -->
+              <div class="d-flex flex-column align-items-center text-center mt-4 mt-md-0">
+                <div class="d-flex justify-content-center mb-4">
+                  <div class="d-flex text-black">
+                    <div class="step-circle active">1</div>
+                    <div class="step-circle inactive ml-2">2</div>
+                    <div class="step-circle inactive ml-2">3</div>
+                    <div class="step-circle inactive ml-2">4</div>
+                    <div class="step-circle inactive ml-2">5</div>
+                    <div class="step-circle inactive ml-2">6</div>
+                  </div>
+                </div>
+                <h2 class="text-black font-weight-bold mb-2">LOCATE YOUR PROPERTY</h2>
+                <p class="text-black">
+                  Locate your property by entering building name, road, or location or pointing on the map.
+                </p>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Sixth Section -->
+    <div class="container-fluid py-5" style="background-color: black;">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row text-center">
+                    <!-- Basic Plan -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4">
+                            <h2 class="h4 mb-3">Basic</h2>
+                            <p class="text-red-500 h5 mb-3">Free</p>
+                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Free Signup</button>
+                            <ul class="list-unstyled text-left">
+                                <li class="my-3">• Valuation of apartment, independent house, or a plot of land</li>
+                                <li class="my-3">• Maintain Archive of Valuation Report</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div class="col-md-4 mb-4 module">
+                        <div class="p-4 ">
+                            <h2 class="h4 mb-3">Premium</h2>
+                            <p class="text-red-500 h5 mb-3">INR 499 per valuation</p>
+                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Buy Now</button>
+                            <ul class="list-unstyled text-left">
+                                <li class="my-3">• Valuation of apartment, independent house, or a plot of land</li>
+                                <li class="my-3">• Data of comparable</li>
+                                <li class="my-3">• Guideline Values</li>
+                                <li>• Market Dynamics</li>
+                                <li>• Price correction risk</li>
+                                <li class="my-3">• Valuation report in PDF</li>
+                                <li class="my-3">• Maintain archive of valuation report</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Enterprise Plan -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4">
+                            <h2 class="h4 mb-3">Enterprise</h2>
+                            <p class="text-red-500 h5 mb-3">Subscription, Portfolio</p>
+                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Contact sales</button>
+                            <ul class="list-unstyled text-left">
+                                <li class="my-3">• Annual subscription</li>
+                                <li class="my-3">• Valuation of bulk cases</li>
+                                <li class="my-3">• Price indexation</li>
+                                <li class="my-3">• Call: <span class="text-red-500">+91 88333 44500</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 sevensection_col4">
+                <div class="sevene_div">
+                    <h3>Select the right plan for yourself</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid sec">
+            <button class="btn bg-red-500 text-white py-1 px-3">View sample report</button>
+            <p class=" mt-3 text-red-500">*Plus GST as applicable</p>
+            <p class="mt-3">(Please agree and accept the <b>terms and conditions</b> before you pay)</p>
+        </div>
+    </div>
+
+    <!-- Seventh Section -->
     <div class="container-fluid py-5" style="background-color: white;">
         <div class="row ">
             <div class="col-sm-12 col-md-12 col-lg-3 text-center m-auto">
@@ -281,9 +577,8 @@
         </div>
     </div>
 
-
-    <!-- Desktop Valuation Section -->
-    <div class="container-fluid">
+    <!-- Eighth Section -->
+    <div class="container-fluid" style="background-color: black;">
         <div class="row content">
             <div class="col-lg-6 p-4 m-auto">
                 <div class="row">
@@ -350,69 +645,88 @@
         </div>
     </div>
 
-    <!-- Pricing Plans Section -->
-    <div class="container-fluid py-5">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="row text-center">
-                    <!-- Basic Plan -->
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <h2 class="h4 mb-3">Basic</h2>
-                            <p class="text-red-500 h5 mb-3">Free</p>
-                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Free Signup</button>
-                            <ul class="list-unstyled text-left">
-                                <li class="my-3">• Valuation of apartment, independent house, or a plot of land</li>
-                                <li class="my-3">• Maintain Archive of Valuation Report</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Premium Plan -->
-                    <div class="col-md-4 mb-4 module">
-                        <div class="p-4 ">
-                            <h2 class="h4 mb-3">Premium</h2>
-                            <p class="text-red-500 h5 mb-3">INR 499 per valuation</p>
-                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Buy Now</button>
-                            <ul class="list-unstyled text-left">
-                                <li class="my-3">• Valuation of apartment, independent house, or a plot of land</li>
-                                <li class="my-3">• Data of comparable</li>
-                                <li class="my-3">• Guideline Values</li>
-                                <li>• Market Dynamics</li>
-                                <li>• Price correction risk</li>
-                                <li class="my-3">• Valuation report in PDF</li>
-                                <li class="my-3">• Maintain archive of valuation report</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Enterprise Plan -->
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <h2 class="h4 mb-3">Enterprise</h2>
-                            <p class="text-red-500 h5 mb-3">Subscription, Portfolio</p>
-                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Contact sales</button>
-                            <ul class="list-unstyled text-left">
-                                <li class="my-3">• Annual subscription</li>
-                                <li class="my-3">• Valuation of bulk cases</li>
-                                <li class="my-3">• Price indexation</li>
-                                <li class="my-3">• Call: <span class="text-red-500">+91 88333 44500</span></li>
-                            </ul>
+    <!-- Nineth Section -->
+    <div class="container-fluid py-5" style="background-color: #e56867;">
+        <div class="row text-center">
+            <div class="col-sm-6 m-auto">
+                <h1 class="title">Given Solutions for Banks & HFC's</h1>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card_pink">
+                    <div class="card-content">
+                        <div class="number">1</div>
+                        <div class="text-content">
+                            <div class="question">
+                                <i class="fas fa-question-circle"></i>
+                                <span>Institutions may not have correct address or latitude and longitude of the properties?</span>
+                            </div>
+                            <div class="solution">
+                                <i class="fas fa-gift"></i>
+                                <span>Created a machine learning algorithm to geocode property addresses based only on address text.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-4 sevensection_col4">
-                <div class="sevene_div">
-                    <h3>Select the right plan for yourself</h3>
-                </div>
+                <div class="dots">• • • • •</div>
             </div>
         </div>
-        <div class="container-fluid sec">
-            <button class="btn bg-red-500 text-white py-1 px-3">View sample report</button>
-            <p class=" mt-3 text-red-500">*Plus GST as applicable</p>
-            <p class="mt-3">(Please agree and accept the <b>terms and conditions</b> before you pay)</p>
-        </div>
+       
+
     </div>
 
+<!-- Footer section -->
+<footer class="footer">
+    <div class="container-fluid p-5" style="background-color: black;">
+        <div class="row" style="justify-content: space-between">
+            <div class="col-lg-4 mb-4">
+                <img src="./logo.png" alt="Liases Foras Logo" class="mb-2" width="55%" >
+                <div class="border-red"></div>
+                <p class="text-sm">
+                    Liases Foras, founded in 1998, is the only non-brokerage real estate research company in India. Data and science form the core of our services, which range from providing market intelligence and risk advisory to lenders and mortgage companies, to providing development advice, best use, and valuations to developers, funds, banks and corporations.
+                </p>
+            </div>
+            <div class="col-lg-2 mb-4">
+                <h2 class="h5 pt-3">Contact us</h2>
+                <div class="border-red"></div>
+                <p class="mb-2"><i class="fas fa-envelope"></i> contact@liasesforas.com</p>
+                <p class="mb-4"><i class="fas fa-phone"></i> +91 9833344500</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-4">
+                <h2 class="h5 pt-3">Our Services</h2>
+                <div class="border-red"></div>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#">Home</a></li>
+                    <li class="mb-2"><a href="#">About Us</a></li>
+                    <li class="mb-2"><a href="#">Products</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 mb-4">
+                <h2 class="h5 pt-3">Quick links</h2>
+                <div class="border-red"></div>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#">Desktop Valuation</a></li>
+                    <li class="mb-2"><a href="#">Investable Score</a></li>
+                    <li class="mb-2"><a href="#">House Hunt</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="row px-5" style="background-color: grey;">
+        <div class="col-12">
+            <div class="copyright">
+                <p>© 2023 PROPERTY SCIENCE. All rights reserved. <a href="#" class="text-danger">Terms and Conditions</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
