@@ -15,7 +15,7 @@
 <body>
     <!-- One Section -->
     <div class="container-fluid">
-        <img src="https://storage.googleapis.com/a1aa/image/fu-nO6RrEBmyHtTBIgHLb9hVnl8mfcKnv6I6kgXH2pg.jpg" alt="Background image of city buildings" class="background-image">
+        <img src="./images/section1_bg.png" alt="Background image of city buildings" class="background-image">
         <div class="overlay"></div>
         <div class="header">
             <div class="logo">
@@ -28,32 +28,43 @@
             </div>
         </div>
         <div class="main-content">
-            <h1><span>Desktop</span> Valuation</h1>
+            <h1 class="text-right"><span>Desktop</span> Valuation</h1>
             <div class="search-bar">
-                <div class="tabs">
-                    <button class="active">Desktop Valuation</button>
-                    <button>Investable Score</button>
-                    <button>House Hunt</button>
+                <div class="row">
+                    <div class="col-sm-6 clm1">
+                        <div class="tabs">
+                            <button class="active">Desktop Valuation</button>
+                            <button>Investable Score</button>
+                            <button>House Hunt</button>
+                        </div>
+                        <div class="desktop_line"></div>
+                        <div class="search-input">
+                            <input type="text" placeholder="Search">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="description">
+                            <h2>Desktop Valuation</h2>
+                            <p>Data driven automated valuation model for valuation of an apartment, land or independent house.</p>
+                            <button>Know more</button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 text-center">
+                        <img src="./images/section1_rightbg.png" alt="">
+                    </div>
                 </div>
-                <div class="search-input">
-                    <input type="text" placeholder="Search">
-                    <i class="fas fa-search"></i>
-                </div>
+
             </div>
-            <div class="description">
-                <h2>Desktop Valuation</h2>
-                <p>Data driven automated valuation model for valuation of an apartment, land or independent house.</p>
-                <button>Know more</button>
-            </div>
-        </div>
-        <div class="section1_btm">
+            <div class="section1_btm">
             
-            <div class="appointment">
-                <p>Speak to Expert</p>
-                <input type="email" placeholder="Email Address">
-                <button>Book Appointment</button>
+                <div class="appointment">
+                    <p>Speak to Expert</p>
+                    <input type="email" placeholder="Email Address">
+                    <button>Book Appointment</button>
+                </div>
             </div>
         </div>
+
     </div>
 
     <!-- Second Section  -->
@@ -114,23 +125,35 @@
         </div>
      </section>
 
-<!-- Third Section -->
-<section id="section3">
-    <div class="container-fluid section_overlay">
-        <div class="row">
-          <!-- Left Side Text Section -->
-          <div class="col-12 col-lg-6 col-md-12 m-auto">
-            <h1 class="text-white">Here’s what makes it an easy to use interface</h1>
-          </div>
-    
-          <!-- Right Side Image and Step Section -->
-          <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-            
-          </div>
+    <!-- Third Section -->   
+    <section id="section3">
+    <div class="container-fluid" >
+        <div class="row w-100 h-100">
+            <div class="col-md-5 column">
+            <h1 class="column_h1">Here's what makes it an easy to use interface</h1>
+            </div>
+            <div class="col-md-7 column" style="justify-content: start;">
+            <div class="section3_right">
+                <div class="circle-container">
+                    <div class="circle">
+                        <img src="./images/brain.png" alt="ML Icon" class="icon_right">
+                        <p>We have created a machine-learning algorithm to geocode property addresses based only on address text.</p>
+                        <button class="btn btn-danger btn_left">Know more</button>
+                    </div>
+                    <div class="progress-line"></div>
+                </div>
+                <div class="text-section-right">
+                    <h6 class="brain_1">MACHINE LEARNING ALGORITHM</h6>
+                    <h6 class="brain_2">URBAN PRICE SETTING MODEL</h6>
+                    <h6 class="brain_3">RECOMMENDATION ENGINE OPTIMIZATION</h6>
+                    <h6 class="brain_4">UNIFIED DATA STRUCTURE</h6>
+                    <h6 class="brain_5">MARKET VALUE ASSESSMENT</h6>
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
+        </div>
     </section>
-   
 
     <!-- Fourth Section -->
      <section id="section4">
@@ -189,52 +212,49 @@
      </section>
 
 
-    <!-- Fifth Section -->
      <section id="section5">
-        <div class="container-fluid">
+        <div class="container-fluid" >
             <div class="row">
-              <!-- Left Side Text Section -->
-              <div class="col-12 col-lg-5 col-md-12 m-auto">
-                <h1 class="text-white">How Desktop<br>Valuation Works?</h1>
-              </div>
-        
-              <!-- Right Side Image and Step Section -->
-              <div class="col-12 col-lg-7 col-md-12 col-sm-12">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-                  
-                  <!-- Image Section -->
-                  <div class="tablet-frame mb-4 mb-md-0">
-                    <img alt="building with multiple floors" class="w-100 h-100 object-cover rounded-lg section5_img" src="https://storage.googleapis.com/a1aa/image/Og7Su1dAI2tL6eEWzt6PlHLXI-DcXv5ihG63g4Vf0hA.jpg" />
-                    <div class="play-button">
-                     <i class="fas fa-play"></i>
-                    </div>
-                  </div>
-        
-                  <!-- Steps Section -->
-                  <div class="d-flex flex-column align-items-center text-center mt-4 mt-md-0">
-                    <div class="d-flex justify-content-center mb-4">
-                      <div class="d-flex text-black">
-                        <div class="step-circle active">1</div>
-                        <div class="step-circle inactive ml-2">2</div>
-                        <div class="step-circle inactive ml-2">3</div>
-                        <div class="step-circle inactive ml-2">4</div>
-                        <div class="step-circle inactive ml-2">5</div>
-                        <div class="step-circle inactive ml-2">6</div>
-                      </div>
-                    </div>
-                    <h2 class="text-black font-weight-bold mb-2">LOCATE YOUR PROPERTY</h2>
-                    <p class="text-black">
-                      Locate your property by entering building name, road, or location or pointing on the map.
-                    </p>
-                  </div>
-        
+                <div class="col-12 col-lg-5 col-md-12 m-auto column">
+                    <h1 class="text-white">How Desktop<br>Valuation Works?</h1>
                 </div>
-              </div>
+                <div class="col-12 col-lg-7 col-md-12 col-sm-12 column">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+                  
+                        <!-- Image Section -->
+                        <div class="tablet-frame mb-4 mb-md-0">
+                          <img alt="building with multiple floors" class="w-100 h-100 object-cover rounded-lg section5_img" src="https://storage.googleapis.com/a1aa/image/Og7Su1dAI2tL6eEWzt6PlHLXI-DcXv5ihG63g4Vf0hA.jpg" />
+                          <div class="play-button">
+                           <i class="fas fa-play"></i>
+                          </div>
+                        </div>
+              
+                        <!-- Steps Section -->
+                        <div class="steps_text">
+                          <div class="d-flex justify-content-start mb-5">
+                            <div class="d-flex text-black" style="gap: 4px;">
+                              <div class="step-circle active">1</div>
+                              <div class="step-circle inactive ml-2">2</div>
+                              <div class="step-circle inactive ml-2">3</div>
+                              <div class="step-circle inactive ml-2">4</div>
+                              <div class="step-circle inactive ml-2">5</div>
+                              <div class="step-circle inactive ml-2">6</div>
+                            </div>
+                          </div>
+                          <h4 class="text-black font-weight-bold mb-2">LOCATE YOUR PROPERTY</h4>
+                          <p class="text-black">
+                            Locate your property by entering building name, road, or location or pointing on the map.
+                          </p>
+                        </div>
+              
+                      </div>
+                </div>
             </div>
-          </div>
+            </div>
+        </section>
 
-          
-     </section>
+
+
 
 
     <!-- Sixth Section -->
