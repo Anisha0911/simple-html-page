@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -7,519 +7,316 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        /* General Styles */
-        body {
-            /* background-color: black; */
-            color: white;
-            font-family: Arial, sans-serif;
-        }
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
 
-        .content {
-            height: 100vh;
-        }
-
-        .image-container {
-            position: relative;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.2;
-        }
-
-        .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .arrow-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .arrow-container i {
-            margin-left: 10px;
-        }
-
-        .text-red-500 {
-            color: #f56565;
-        }
-
-        .bg-red-500 {
-            background-color: #f56565;
-        }
-
-        .rounded-full {
-            border-radius: 9999px;
-        }
-
-        .underline {
-            text-decoration: underline;
-        }
-
-        .sec {
-            display: flex;
-            flex-direction: row;
-            justify-content: left;
-            align-items: center;
-            gap: 1.3%;
-            margin-top: 30px;
-        }
-
-        .sevensection_col4 {
-            place-content: center;
-        }
-
-        .module {
-            padding: 1rem;
-            color: white;
-            border-width: 3px;
-            border-style: solid;
-            border-image:
-                linear-gradient(to bottom,
-                    White,
-                    rgba(0, 0, 0, 0)) 1 100%;
-        }
-
-        .sevene_div {
-            padding: 3rem;
-            text-align: center;
-        }
-
-        .btn {
-            border-radius: 12px;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .content {
-                height: auto;
-            }
-
-            .image-container {
-                height: 300px;
-            }
-
-            .text-overlay h1 {
-                font-size: 2.5rem;
-            }
-
-            .row > .col-lg-6 {
-                padding: 1rem;
-            }
-
-            /* Stack columns on small screens */
-            .col-4 {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-
-            .module {
-                border: black;
-            }
-
-            .sec {
-                flex-direction: column;
-                align-items: center;
-                gap: 0;
-            }
-
-            .col-sm-8,
-            .col-sm-4 {
-                padding: 0 15px;
-            }
-
-            .col-md-4 {
-                margin-bottom: 1.5em;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 200px;
-            }
-
-            .container-fluid {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
-            .text-center h3 {
-                font-size: 1.5rem;
-            }
-
-            .text-red-500 {
-                font-size: 1.25rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .text-center h3 {
-                font-size: 1.2rem;
-            }
-
-            .text-red-600 {
-                font-size: 1.2rem;
-            }
-
-            .list-unstyled li {
-                font-size: 0.9rem;
-            }
-
-            .text-overlay h1 {
-                font-size: 2rem;
-            }
-        }
-
-        /* Use Case Styles */
-        .card-img-top {
-            object-fit: cover;
-            height: 200px;
-        }
-
-        .card-body {
-            text-align: center;
-        }
-
-        .dots {
-            display: inline-block;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #6c757d;
-            display: inline-block;
-            margin-right: 5px;
-        }
-        .text-black{
-            color: black;
-        }
-        .video_second{
-            color: #fff !important;
-    background-color: black;
-    top: 82%;
-    right: 2%;
-    position: absolute;
-        }
-        /* third section css */
-        .step-circle {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-    .step-circle.active {
-      background-color: white;
-      color: black;
-    }
-    .step-circle.inactive {
-      border: 2px solid white;
-      color: black;
-    }
-    .step-circle.ml-2 {
-      margin-left: 10px;
-    }
-    .tablet-frame {
-      width: 100%;
-      max-width: 350px;
-      height: 440px;
-      background-color: white;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #FF0000;
-      color: white;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-    }
-/* footer css */
-        .footer {
-            color: white;
-        }
-        .footer a {
-            color: white;
-        }
-        .footer .border-red {
-            border-bottom: 2px solid red;
-            width: 50px;
-            margin-bottom: 1rem;
-        }
-        .footer .social-icons a {
-            color: white;
-            margin-right: 1rem;
-        }
-        .footer .social-icons a:last-child {
-            margin-right: 0;
-        }
-        .footer .copyright {
-            padding-top: 1rem;
-            text-align: left;
-        }
-
-        /* Eighth section */
-        .title {
-            color: white;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        .card_pink {
-            background-color: #bd4343;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 60rem;
-            margin: 0 auto;
-        }
-        .card_pink_content {
-            display: flex;
-            align-items: center;
-        }
-        .number {
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            border: 2px dashed white;
-            margin-right: 1rem;
-            position: absolute;
-    top: 35%;
-    left: -3.5%;
-        }
-        .text-content {
-            text-align: left;
-        }
-        .question {
-            display: flex;
-            align-items: center;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-        .question i {
-            margin-right: 0.5rem;
-        }
-        .solution {
-            background-color: #872525;
-            border-radius: 0.5rem;
-            padding: 0.5rem;
-            display: flex;
-            align-items: center;
-            color: white;
-        }
-        .solution i {
-            margin-right: 0.5rem;
-        }
-        .dots {
-            margin-top: 1rem;
-            color: white;
-            font-size: 1.25rem;
-        }
-    </style>
 </head>
 
 <body>
-
-    <!-- Fourth Section -->
-    <div class="container-fluid py-5" style="background-color: #d9d9d9;">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                <div class="col-sm-4 py-3">
-                    <div class="">
-                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
-                        <p class="text-dark">Comprehensive Valuation report - downloadable in pdf format</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 py-3">
-                    <div class="">
-                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
-                        <p class="text-dark">Comparable projects from our primary and secondary data</p>
-                    </div>
-
-                </div>
-                <div class="col-sm-4 py-3">
-                    <div class="">
-                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
-                        <p class="text-dark">Guideline Values (for Maharashtra, Telangana and Karnataka)</p>
-                    </div>
-
-                </div>
-                <div class="col-sm-4 py-3">
-                    <div class="">
-                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
-                        <p class="text-dark">PCR - Price Correction Risk Analytics</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 py-3">
-                    <div class="">
-                        <i class="fas fa-check-square text-dark me-2 pb-3"></i>
-                        <p class="text-dark">Catchment Market Dynamics covering trends of demand, supply, price, month inventory & sales velocity</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 py-3" style="place-content: center;">
-                    <div class="">
-                        <button class="btn btn-danger rounded-4">Click Now</button>
-                    </div>
-                </div>
-
+    <!-- One Section -->
+    <div class="container-fluid">
+        <img src="https://storage.googleapis.com/a1aa/image/fu-nO6RrEBmyHtTBIgHLb9hVnl8mfcKnv6I6kgXH2pg.jpg" alt="Background image of city buildings" class="background-image">
+        <div class="overlay"></div>
+        <div class="header">
+            <div class="logo">
+                <img src="./images/header_logo.png">
             </div>
+            <div class="icons">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user-circle"></i>
+                <i class="fas fa-bars"></i>
             </div>
-            <div class="col-md-4 m-auto">
-                <div class="mt-5 text-center text-lg-start">
-                    <p class="text-dark fs-4">Not just a price estimate but a professional valuation report</p>
+        </div>
+        <div class="main-content">
+            <h1><span>Desktop</span> Valuation</h1>
+            <div class="search-bar">
+                <div class="tabs">
+                    <button class="active">Desktop Valuation</button>
+                    <button>Investable Score</button>
+                    <button>House Hunt</button>
+                </div>
+                <div class="search-input">
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Desktop Valuation</h2>
+                <p>Data driven automated valuation model for valuation of an apartment, land or independent house.</p>
+                <button>Know more</button>
+            </div>
+        </div>
+        <div class="section1_btm">
+            
+            <div class="appointment">
+                <p>Speak to Expert</p>
+                <input type="email" placeholder="Email Address">
+                <button>Book Appointment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Section  -->
+     <section id="section2">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Left side: Cards -->
+                <div class="col-lg-8">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                        <!-- Card 1 -->
+                        <div class="col my-3">
+                            <div class="number_card">
+                                <div class="number_icon">1</div>
+                                <div class="text-center mt-3">
+                                    <h2 class="h5 fw-semibold mb-4">Primary Data<br>(Developes Supply)</h2>
+                                    <p class="mt-5">Tracking of 20,000+ live projects through field survey</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col my-3">
+                            <div class="number_card">
+                                <div class="number_icon">2</div>
+                                <div class="text-center mt-3">
+                                    <h2 class="h5 fw-semibold mb-4">Secondary Data<br>(Resale)</h2>
+                                    <p class="mt-5">Listing data of 1 million properties.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col my-3">
+                            <div class="number_card">
+                                <div class="number_icon">3</div>
+                                <div class="text-center mt-3">
+                                    <h2 class="h5 fw-semibold mb-4">Registration Data</h2>
+                                    <p class="mt-5">Up-to-date mapping of 5 million legal transactions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col my-3">
+                            <div class="number_card">
+                                <div class="number_icon">4</div>
+                                <div class="text-center mt-3">
+                                    <h2 class="h5 fw-semibold mb-4">RERA Data</h2>
+                                    <p class="mt-5">Data of all RERA registered projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right side: Description -->
+                <div class="col-lg-4 m-auto">
+                    <h2 class="text-black">India’s oldest and largest repository of Real estate data</h2>
                 </div>
             </div>
         </div>
+     </section>
 
-    </div>
-
-    <!-- Fifth Section -->
-    <div class="container-fluid bg-danger py-5 ">
+<!-- Third Section -->
+<section id="section3">
+    <div class="container-fluid section_overlay">
         <div class="row">
           <!-- Left Side Text Section -->
-          <div class="col-12 col-lg-5 col-md-12 m-auto">
-            <h1 class="text-white">How Desktop<br>Valuation Works?</h1>
+          <div class="col-12 col-lg-6 col-md-12 m-auto">
+            <h1 class="text-white">Here’s what makes it an easy to use interface</h1>
           </div>
     
           <!-- Right Side Image and Step Section -->
-          <div class="col-12 col-lg-7 col-md-12 col-sm-12">
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-              
-              <!-- Image Section -->
-              <div class="tablet-frame mb-4 mb-md-0">
-                <img alt="A tall building with multiple floors and a cityscape in the background" class="w-100 h-100 object-cover rounded-lg" src="https://storage.googleapis.com/a1aa/image/Og7Su1dAI2tL6eEWzt6PlHLXI-DcXv5ihG63g4Vf0hA.jpg" />
-                <div class="play-button">
-                 <i class="fas fa-play"></i>
-                </div>
-              </div>
-    
-              <!-- Steps Section -->
-              <div class="d-flex flex-column align-items-center text-center mt-4 mt-md-0">
-                <div class="d-flex justify-content-center mb-4">
-                  <div class="d-flex text-black">
-                    <div class="step-circle active">1</div>
-                    <div class="step-circle inactive ml-2">2</div>
-                    <div class="step-circle inactive ml-2">3</div>
-                    <div class="step-circle inactive ml-2">4</div>
-                    <div class="step-circle inactive ml-2">5</div>
-                    <div class="step-circle inactive ml-2">6</div>
-                  </div>
-                </div>
-                <h2 class="text-black font-weight-bold mb-2">LOCATE YOUR PROPERTY</h2>
-                <p class="text-black">
-                  Locate your property by entering building name, road, or location or pointing on the map.
-                </p>
-              </div>
-    
-            </div>
+          <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+            
           </div>
         </div>
       </div>
+    </section>
+   
+
+    <!-- Fourth Section -->
+     <section id="section4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                    <div class="col-sm-4 py-3">
+                        <div class="">
+                            <i class="fas fa-check-square text-black me-2 pb-3"></i>
+                            <p class="text-dark">Comprehensive Valuation report - downloadable in pdf format</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 py-3">
+                        <div class="">
+                            <i class="fas fa-check-square text-black me-2 pb-3"></i>
+                            <p class="text-dark">Comparable projects from our primary and secondary data</p>
+                        </div>
+    
+                    </div>
+                    <div class="col-sm-4 py-3">
+                        <div class="">
+                            <i class="fas fa-check-square text-black me-2 pb-3"></i>
+                            <p class="text-dark">Guideline Values (for Maharashtra, Telangana and Karnataka)</p>
+                        </div>
+    
+                    </div>
+                    <div class="col-sm-4 py-3">
+                        <div class="">
+                            <i class="fas fa-check-square text-black me-2 pb-3"></i>
+                            <p class="text-dark">PCR - Price Correction Risk Analytics</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 py-3">
+                        <div class="">
+                            <i class="fas fa-check-square text-black me-2 pb-3"></i>
+                            <p class="text-dark">Catchment Market Dynamics covering trends of demand, supply, price, month inventory & sales velocity</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 py-3" style="place-content: center;">
+                        <div class="">
+                            <button class="btn btn-danger btn_left">Click Now</button>
+                        </div>
+                    </div>
+    
+                </div>
+                </div>
+                <div class="col-md-4 m-auto">
+                    <div class="text-center text-lg-start">
+                        <p class="text-black section4_right">Not just a price estimate but a professional valuation report</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+     </section>
+
+
+    <!-- Fifth Section -->
+     <section id="section5">
+        <div class="container-fluid">
+            <div class="row">
+              <!-- Left Side Text Section -->
+              <div class="col-12 col-lg-5 col-md-12 m-auto">
+                <h1 class="text-white">How Desktop<br>Valuation Works?</h1>
+              </div>
+        
+              <!-- Right Side Image and Step Section -->
+              <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+                  
+                  <!-- Image Section -->
+                  <div class="tablet-frame mb-4 mb-md-0">
+                    <img alt="building with multiple floors" class="w-100 h-100 object-cover rounded-lg section5_img" src="https://storage.googleapis.com/a1aa/image/Og7Su1dAI2tL6eEWzt6PlHLXI-DcXv5ihG63g4Vf0hA.jpg" />
+                    <div class="play-button">
+                     <i class="fas fa-play"></i>
+                    </div>
+                  </div>
+        
+                  <!-- Steps Section -->
+                  <div class="d-flex flex-column align-items-center text-center mt-4 mt-md-0">
+                    <div class="d-flex justify-content-center mb-4">
+                      <div class="d-flex text-black">
+                        <div class="step-circle active">1</div>
+                        <div class="step-circle inactive ml-2">2</div>
+                        <div class="step-circle inactive ml-2">3</div>
+                        <div class="step-circle inactive ml-2">4</div>
+                        <div class="step-circle inactive ml-2">5</div>
+                        <div class="step-circle inactive ml-2">6</div>
+                      </div>
+                    </div>
+                    <h2 class="text-black font-weight-bold mb-2">LOCATE YOUR PROPERTY</h2>
+                    <p class="text-black">
+                      Locate your property by entering building name, road, or location or pointing on the map.
+                    </p>
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+     </section>
+
 
     <!-- Sixth Section -->
-    <div class="container-fluid py-5" style="background-color: black;">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="row text-center">
-                    <!-- Basic Plan -->
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <h2 class="h4 mb-3">Basic</h2>
-                            <p class="text-red-500 h5 mb-3">Free</p>
-                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Free Signup</button>
-                            <ul class="list-unstyled text-left">
-                                <li class="my-3">• Valuation of apartment, independent house, or a plot of land</li>
-                                <li class="my-3">• Maintain Archive of Valuation Report</li>
-                            </ul>
+    <section id="section6">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="row text-center">
+                        <!-- Basic Plan -->
+                        <div class="col-md-4 mb-4">
+                            <div class="p-4">
+                                <h2 class="h4 mb-3">Basic</h2>
+                                <p class="text-red-500 h5 mb-3">Free</p>
+                                <button class="btn btn-light text-dark py-1 px-3 mb-4">Free Signup</button>
+                                <ul class="list-unstyled text-left">
+                                    <li class="my-3">Valuation of apartment, independent house, or a plot of land</li>
+                                    <li class="my-3">Maintain Archive of Valuation Report</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Premium Plan -->
-                    <div class="col-md-4 mb-4 module">
-                        <div class="p-4 ">
-                            <h2 class="h4 mb-3">Premium</h2>
-                            <p class="text-red-500 h5 mb-3">INR 499 per valuation</p>
-                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Buy Now</button>
-                            <ul class="list-unstyled text-left">
-                                <li class="my-3">• Valuation of apartment, independent house, or a plot of land</li>
-                                <li class="my-3">• Data of comparable</li>
-                                <li class="my-3">• Guideline Values</li>
-                                <li>• Market Dynamics</li>
-                                <li>• Price correction risk</li>
-                                <li class="my-3">• Valuation report in PDF</li>
-                                <li class="my-3">• Maintain archive of valuation report</li>
-                            </ul>
+                        <!-- Premium Plan -->
+                        <div class="col-md-4 mb-4 module">
+                            <div class="p-4 ">
+                                <h2 class="h4 mb-3">Premium</h2>
+                                <p class="text-red-500 h5 mb-3">INR 499 per valuation</p>
+                                <button class="btn btn-light text-dark py-1 px-3 mb-4">Buy Now</button>
+                                <ul class="list-unstyled text-left">
+                                    <li class="my-3">Valuation of apartment, independent house, or a plot of land</li>
+                                    <li class="my-3">Data of comparable</li>
+                                    <li class="my-3">Guideline Values</li>
+                                    <li>• Market Dynamics</li>
+                                    <li>• Price correction risk</li>
+                                    <li class="my-3">Valuation report in PDF</li>
+                                    <li class="my-3">Maintain archive of valuation report</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Enterprise Plan -->
-                    <div class="col-md-4 mb-4">
-                        <div class="p-4">
-                            <h2 class="h4 mb-3">Enterprise</h2>
-                            <p class="text-red-500 h5 mb-3">Subscription, Portfolio</p>
-                            <button class="btn btn-light text-dark py-1 px-3 mb-4">Contact sales</button>
-                            <ul class="list-unstyled text-left">
-                                <li class="my-3">• Annual subscription</li>
-                                <li class="my-3">• Valuation of bulk cases</li>
-                                <li class="my-3">• Price indexation</li>
-                                <li class="my-3">• Call: <span class="text-red-500">+91 88333 44500</span></li>
-                            </ul>
+                        <!-- Enterprise Plan -->
+                        <div class="col-md-4 mb-4">
+                            <div class="p-4">
+                                <h2 class="h4 mb-3">Enterprise</h2>
+                                <p class="text-red-500 h5 mb-3">Subscription, Portfolio</p>
+                                <button class="btn btn-light text-dark py-1 px-3 mb-4">Contact sales</button>
+                                <ul class="list-unstyled text-left">
+                                    <li class="my-3">Annual subscription</li>
+                                    <li class="my-3">Valuation of bulk cases</li>
+                                    <li class="my-3">Price indexation</li>
+                                    <li class="my-3">Call: <span class="text-red-500">+91 88333 44500</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-4 sevensection_col4">
-                <div class="sevene_div">
-                    <h3>Select the right plan for yourself</h3>
+                <div class="col-sm-4 sevensection_col4">
+                    <div class="sevene_div">
+                        <h3>Select the right plan for yourself</h3>
+                    </div>
                 </div>
             </div>
+            <div class="container-fluid sec">
+                <button class="btn bg-red-500 text-white py-1 px-3">View sample report</button>
+                <p class=" mt-3 text-red-500">*Plus GST as applicable</p>
+                <p class="mt-3">(Please agree and accept the <b>terms and conditions</b> before you pay)</p>
+            </div>
         </div>
-        <div class="container-fluid sec">
-            <button class="btn bg-red-500 text-white py-1 px-3">View sample report</button>
-            <p class=" mt-3 text-red-500">*Plus GST as applicable</p>
-            <p class="mt-3">(Please agree and accept the <b>terms and conditions</b> before you pay)</p>
-        </div>
-    </div>
+    </section>
+
+    
+
 
     <!-- Seventh Section -->
-    <div class="container-fluid py-5" style="background-color: white;">
-        <div class="row ">
+    <section id="section7">
+    <div class="container-fluid py-5" >
+        <div class="row text-center">
             <div class="col-sm-12 col-md-12 col-lg-3 text-center m-auto">
-                <h1 class="text-3xl font-bold text-black">Use Cases</h1>
+                <h2 class="text-3xl font-bold text-black text-left">Use Cases</h2>
               </div>
           <!-- Card 1 -->
           <div class="col-sm-12 col-md-4 col-lg-3">
             <div class="card h-100">
               <div class="position-relative">
-                <img alt="Image of an iconic building in Mumbai" class="card-img-top" src="https://storage.googleapis.com/a1aa/image/TdJBcAump4EQOe7TTUvz2ISfm2BVYIy7MYk7g0TWOZg.jpg"/>
+                <img alt="Image of an iconic building in Mumbai" class="card-img-top" src="./images/card3.png"/>
                 <div class="position-absolute top-50 start-50 translate-middle text-white">
                   <i class="fas fa-play-circle fs-1"></i>
                 </div>
@@ -537,7 +334,7 @@
           <div class="col-sm-12 col-md-4 col-lg-3">
             <div class="card h-100">
               <div class="position-relative">
-                <img alt="Image of an independent house" class="card-img-top" src="https://storage.googleapis.com/a1aa/image/c4PEizhrSrlyBdEezcavPktvwOjCmHg1mjoFUOzHIGk.jpg"/>
+                <img alt="Image of an independent house" class="card-img-top" src="./images/card1.png"/>
                 <div class="position-absolute top-50 start-50 translate-middle text-white">
                   <i class="fas fa-play-circle fs-1"></i>
                 </div>
@@ -555,7 +352,7 @@
           <div class="col-sm-12 col-md-4 col-lg-3">
             <div class="card h-100">
               <div class="position-relative">
-                <img alt="Image of an old apartment in Bangalore" class="card-img-top" src="https://storage.googleapis.com/a1aa/image/rS0tZFLW91Y3PMn21TSp6oPlslQPJKwGKjv7aMN6_aA.jpg"/>
+                <img alt="Image of an old apartment in Bangalore" class="card-img-top" src="./images/card2.png"/>
                 <div class="position-absolute top-50 start-50 translate-middle text-white">
                   <i class="fas fa-play-circle fs-1"></i>
                 </div>
@@ -576,158 +373,165 @@
             </div>
         </div>
     </div>
+    </section>
 
     <!-- Eighth Section -->
-    <div class="container-fluid" style="background-color: black;">
-        <div class="row content">
-            <div class="col-lg-6 p-4 m-auto">
-                <div class="row">
-                    <!-- First Column -->
-                    <div class="col-4">
-                        <ul class="list-unstyled">
-                            <li>MMR</li>
-                            <li>NCR</li>
-                            <li>Pune</li>
-                            <li>Chennai</li>
-                            <li>Bangalore</li>
-                            <li>Hyderabad</li>
-                            <li>Ahmedabad</li>
-                            <li>Kolkata</li>
-                            <li>Outer MMR</li>
-                            <li>Indore</li>
-                        </ul>
-                    </div>
-
-                    <!-- Second Column -->
-                    <div class="col-4">
-                        <ul class="list-unstyled">
-                            <li>Outer MMR</li>
-                            <li>Indore</li>
-                            <li>Lucknow</li>
-                            <li>Surat</li>
-                            <li>Jaipur</li>
-                            <li>Nagpur</li>
-                            <li>Bhopal</li>
-                            <li>Nashik</li>
-                            <li>Chandigarh</li>
-                            <li>Vadodara</li>
-                        </ul>
-                    </div>
-
-                    <!-- Third Column -->
-                    <div class="col-4">
-                        <ul class="list-unstyled">
-                            <li>Patna</li>
-                            <li>Outer Hyderabad</li>
-                            <li>Coimbatore</li>
-                            <li>Outer Pune</li>
-                            <li>Raipur</li>
-                            <li>Rajkot</li>
-                            <li>Bhubaneswar</li>
-                            <li>Jodhpur</li>
-                            <li>Thiruvananthapuram</li>
-                            <!-- Guwahati with arrow on the same line -->
-                            <li class="arrow-container">
-                                Guwahati <i class="fas fa-arrow-right text-danger"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Image Section -->
-            <div class="col-lg-6 image-container">
-                <img alt="Stack of devices and a laptop" class="img-fluid" src="https://storage.googleapis.com/a1aa/image/DP-QIfkSMMTxkYI9KzcrVozOtv8OmdmthUHDX8WcXLo.jpg" />
-                <div class="text-overlay">
-                    <h1 class="display-4">Desktop Valuation for 60 Cities</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Nineth Section -->
-    <div class="container-fluid py-5" style="background-color: #e56867;">
-        <div class="row text-center">
-            <div class="col-sm-6 m-auto">
-                <h1 class="title">Given Solutions for Banks & HFC's</h1>
-            </div>
-            <div class="col-sm-6">
-                <div class="card card_pink">
-                    <div class="card-content">
-                        <div class="number">1</div>
-                        <div class="text-content">
-                            <div class="question">
-                                <i class="fas fa-question-circle"></i>
-                                <span>Institutions may not have correct address or latitude and longitude of the properties?</span>
-                            </div>
-                            <div class="solution">
-                                <i class="fas fa-gift"></i>
-                                <span>Created a machine learning algorithm to geocode property addresses based only on address text.</span>
-                            </div>
+     <section id="section8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 content m-auto">
+                    <div class="row">
+                        <!-- First Column -->
+                        <div class="col-4">
+                            <ul class="list-unstyled">
+                                <li>MMR</li>
+                                <li>NCR</li>
+                                <li>Pune</li>
+                                <li>Chennai</li>
+                                <li>Bangalore</li>
+                                <li>Hyderabad</li>
+                                <li>Ahmedabad</li>
+                                <li>Kolkata</li>
+                                <li>Outer MMR</li>
+                                <li>Indore</li>
+                            </ul>
+                        </div>
+    
+                        <!-- Second Column -->
+                        <div class="col-4">
+                            <ul class="list-unstyled">
+                                <li>Outer MMR</li>
+                                <li>Indore</li>
+                                <li>Lucknow</li>
+                                <li>Surat</li>
+                                <li>Jaipur</li>
+                                <li>Nagpur</li>
+                                <li>Bhopal</li>
+                                <li>Nashik</li>
+                                <li>Chandigarh</li>
+                                <li>Vadodara</li>
+                            </ul>
+                        </div>
+    
+                        <!-- Third Column -->
+                        <div class="col-4">
+                            <ul class="list-unstyled">
+                                <li>Patna</li>
+                                <li>Outer Hyderabad</li>
+                                <li>Coimbatore</li>
+                                <li>Outer Pune</li>
+                                <li>Raipur</li>
+                                <li>Rajkot</li>
+                                <li>Bhubaneswar</li>
+                                <li>Jodhpur</li>
+                                <li>Thiruvananthapuram</li>
+                                <!-- Guwahati with arrow on the same line -->
+                                <li class="arrow-container">
+                                    Guwahati <i class="fas fa-arrow-right text-danger"></i>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="dots">• • • • •</div>
-            </div>
-        </div>
-       
-
-    </div>
-
-<!-- Footer section -->
-<footer class="footer">
-    <div class="container-fluid p-5" style="background-color: black;">
-        <div class="row" style="justify-content: space-between">
-            <div class="col-lg-4 mb-4">
-                <img src="./logo.png" alt="Liases Foras Logo" class="mb-2" width="55%" >
-                <div class="border-red"></div>
-                <p class="text-sm">
-                    Liases Foras, founded in 1998, is the only non-brokerage real estate research company in India. Data and science form the core of our services, which range from providing market intelligence and risk advisory to lenders and mortgage companies, to providing development advice, best use, and valuations to developers, funds, banks and corporations.
-                </p>
-            </div>
-            <div class="col-lg-2 mb-4">
-                <h2 class="h5 pt-3">Contact us</h2>
-                <div class="border-red"></div>
-                <p class="mb-2"><i class="fas fa-envelope"></i> contact@liasesforas.com</p>
-                <p class="mb-4"><i class="fas fa-phone"></i> +91 9833344500</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+    
+                <!-- Right Image Section -->
+                <div class="col-lg-6 image-container">
+                    <img alt="laptop" class="img-fluid" src="./images/section8_bg.png" />
+                    <div class="text-overlay">
+                        <h2>Desktop Valuation for 60 Cities</h2>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2 mb-4">
-                <h2 class="h5 pt-3">Our Services</h2>
-                <div class="border-red"></div>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#">Home</a></li>
-                    <li class="mb-2"><a href="#">About Us</a></li>
-                    <li class="mb-2"><a href="#">Products</a></li>
-                </ul>
+        </div>
+     </section>
+
+
+    <!-- Nineth Section -->
+     <section id="section9">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-sm-4 m-auto">
+                    <h1 class="title">Given Solutions for Banks & HFC's</h1>
+                </div>
+                <div class="col-sm-8 text-center">
+                    <div class="card card_pink">
+                        <div class="card-content">
+                            <div class="number">1</div>
+                            <div class="text-content">
+                                <div class="question">
+                                    <img src="./images/question.png">
+                                    <span>Institutions may not have correct address or latitude and longitude of the properties?</span>
+                                </div>
+                                <div class="solution">
+                                    <img src="./images/like.png">
+                                    <span>Created a machine learning algorithm to geocode property addresses based only on address text.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dots">• • • • •</div>
+                </div>
             </div>
-            <div class="col-lg-2 mb-4">
-                <h2 class="h5 pt-3">Quick links</h2>
-                <div class="border-red"></div>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#">Desktop Valuation</a></li>
-                    <li class="mb-2"><a href="#">Investable Score</a></li>
-                    <li class="mb-2"><a href="#">House Hunt</a></li>
-                </ul>
+           
+    
+        </div>
+     </section>
+
+    <!-- Footer section - 10 -->
+    <section id="section10">
+    <footer class="footer">
+        <div class="container-fluid footer_container1">
+            <div class="row" style="justify-content: space-between">
+                <div class="col-lg-4 mb-5">
+                    <img src="./liases 1.png" alt="Liases Foras Logo" class="mb-2 footer_logo" width="350px" height="61px" >
+                    <div class="border-red"></div>
+                    <p class="footer_p">
+                        Liases Foras, founded in 1998, is the only non-brokerage real estate research company in India. Data and science form the core of our services, which range from providing market intelligence and risk advisory to lenders and mortgage companies, to providing development advice, best use, and valuations to developers, funds, banks and corporations.
+                    </p>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h2 class="footer_headings py-2">Contact us</h2>
+                    <div class="border-red mb-4"></div>
+                    <p class="mb-4 pt-2"><i class="fas fa-envelope pr-2"></i><a href="mailto: contact@liasesforas.com">contact@liasesforas.com</a></p>
+                    <p class="mb-4"><i class="fas fa-phone pr-2"></i><a href="callto: 9833344500">+91 9833344500</a></p>
+                    <div class="social-icons">
+                        <a href="#"><img src="./images/footer/twitter.png"></a>
+                        <a href="#"><img src="./images/footer/instagram.png"> </i></a>
+                        <a href="#"><img src="./images/footer/facebook.png"> </i></a>
+                        <a href="#"><img src="./images/footer/linkedin.png"> </i></a>
+                        <a href="#"><img src="./images/footer/youtube.png"> </i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h2 class="footer_headings py-2">Our Services</h2>
+                    <div class="border-red mb-4"></div>
+                    <ul class="list-unstyled">
+                        <li class="mb-4 pt-2"><a href="#">Home</a></li>
+                        <li class="mb-4"><a href="#">About Us</a></li>
+                        <li class="mb-1"><a href="#">Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h2 class="footer_headings py-2">Quick links</h2>
+                    <div class="border-red mb-4"></div>
+                    <ul class="list-unstyled">
+                        <li class="mb-4 pt-2"><a href="#">Desktop Valuation</a></li>
+                        <li class="mb-4"><a href="#">Investable Score</a></li>
+                        <li class="mb-1"><a href="#">House Hunt</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid px-5 bg-gray">
+            <div class="row">
+                <div class="col-sm-12 copyright">
+                    <p class="font-weight-bold text-black">© 2023 PROPERTY SCIENCE. All rights reserved <a href="#" class="text-danger font-weight-bold">Terms and Conditions</a></p>
+                </div>
             </div>
         </div>
-
-    </div>
-    <div class="row px-5" style="background-color: grey;">
-        <div class="col-12">
-            <div class="copyright">
-                <p>© 2023 PROPERTY SCIENCE. All rights reserved. <a href="#" class="text-danger">Terms and Conditions</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    </footer>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

@@ -1,0 +1,120 @@
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content {
+        height: auto;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+
+    .text-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .row > .col-lg-6 {
+        padding: 2rem;
+    }
+
+    #section7, #section6 {
+        padding: 0rem;
+    }
+    /* Stack columns on small screens */
+    .col-4 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .module {
+        border: black;
+    }
+
+    .sec {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .col-sm-8,
+    .col-sm-4 {
+        padding: 0 15px;
+    }
+
+    .col-md-4 {
+        margin-bottom: 1.5em;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .text-center h3 {
+        font-size: 1.5rem;
+    }
+
+    .text-red-500 {
+        font-size: 1.25rem;
+    }
+
+    .footer_container1 {
+        padding: 1.5rem;
+    }
+    #section9 {
+        background-color: #e56867;
+        padding: 2rem 0.8rem;
+    }
+    .title {
+        padding: 0;
+    }
+    .solution span {
+        padding: 1rem 0rem 1rem 4rem;
+    }
+    .question span {
+        padding: 1rem 0rem 1rem 4rem;
+    }
+    .question img {
+        position: absolute;
+        top: 19%;
+        left: 11%;
+    }
+    .number {
+        left: -6.5%;
+    }
+    .text-overlay {
+        left: 50%;
+    }
+    .content {
+        padding: 2rem 1rem 0rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-center h3 {
+        font-size: 1.2rem;
+    }
+
+    .text-red-600 {
+        font-size: 1.2rem;
+    }
+
+    .list-unstyled li {
+        font-size: 0.9rem;
+    }
+
+    .text-overlay h1 {
+        font-size: 2rem;
+    }
+    .footer_logo {
+        width: 100%;
+    }
+    .footer_container1 {
+        padding: 1.5rem;
+    }
+}
