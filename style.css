@@ -1,10 +1,4 @@
   /* General Styles */
-  body {
-      /* background-color: black; */
-      color: white;
-      font-family: Arial, sans-serif;
-  }
-
   .image-container {
       position: relative;
   }
@@ -367,22 +361,9 @@
       background-size: cover;
   }
 
-  #section3 {
-      background-image: url(./images/section3_bg.png);
-      padding: 6rem 3rem;
-      background-position: center;
-      background-color: black;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
 
-  /* *every page */
-  *,
-  body, .container-fluid {
-      padding: 0;
-      margin: 0;
-      font-family: poppins;
-  }
+
+
 
   .list-unstyled {
       list-style: disc;
@@ -434,9 +415,14 @@
       margin: 0;
       padding: 0;
       color: white;
-      background-color: #1a202c;
+      /* background-color: #1a202c; */
   }
-
+    .container-fluid {
+        /* padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0; */
+    }
   .container {
       position: relative;
       text-align: center;
@@ -709,10 +695,11 @@
       display: flex;
       height: 80vh;
       background-image: url('./images/section3_bg.png');
-      /* Dummy background image */
       background-size: cover;
       background-position: center;
       position: relative;
+      background-repeat: no-repeat;
+      padding: 6rem 3rem;
   }
 
   /* Black Overlay */

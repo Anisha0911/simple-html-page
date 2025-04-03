@@ -17,9 +17,7 @@
         padding: 2rem;
     }
 
-    #section7, #section6 {
-        padding: 0rem;
-    }
+
     /* Stack columns on small screens */
     .col-4 {
         width: 100%;
@@ -51,8 +49,8 @@
     }
 
     .container-fluid {
-        padding-left: 15px;
-        padding-right: 15px;
+        /* padding-left: 15px;
+        padding-right: 15px; */
     }
 
     .text-center h3 {
@@ -66,24 +64,14 @@
     .footer_container1 {
         padding: 1.5rem;
     }
-    #section9 {
-        background-color: #e56867;
-        padding: 2rem 0.8rem;
-    }
+
     .title {
         padding: 0;
     }
     .solution span {
         padding: 1rem 0rem 1rem 4rem;
     }
-    .question span {
-        padding: 1rem 0rem 1rem 4rem;
-    }
-    .question img {
-        position: absolute;
-        top: 19%;
-        left: 11%;
-    }
+
     .number {
         left: -6.5%;
     }
@@ -92,6 +80,142 @@
     }
     .content {
         padding: 2rem 1rem 0rem;
+    }
+    /* section 1 */
+    .header {
+        padding: 2rem;
+    }
+    .background-image {
+        height: 150vh;
+    }
+    .overlay {
+        height: 150vh;
+    }
+    .main-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        text-align: left;
+        width: 100%;
+    }
+    .clm1 {
+        padding-left: 8px;
+    }
+    .section1_btm .appointment {
+        flex-direction: column;
+    }
+    .section1_btm {
+        margin-top: 20px;
+    }
+    .section1_btm .appointment p {
+        width: 100%;
+        margin: 8px 0px;
+    }
+    .section1_btm .appointment input {
+        width: 100%;
+        margin: 8px 0px;
+    }
+    .section1_btm .appointment button {
+        margin: 8px 0px;
+        width: 100%;
+    }
+
+    /* SECTION 2 */
+    #section2 {
+        padding: 3rem 2rem;
+    }
+    /* SECTION 3 */
+    #section3 {
+        padding: 2rem;
+        height: 110vh;
+    }
+    .column_h1 {
+        text-align: justify;
+        padding: 0px;
+        font-size: 25px;
+    }
+    .column {
+        padding: 0px;
+    }
+    .brain_1 {
+        top: 102%;
+        left: 0%;
+        width: 100%;
+        text-align: center;
+    }
+    .brain_2 {
+        top: 112%;
+        left: 0%;
+        width: 100%;
+        text-align: center;
+    }
+    .brain_3 {
+        top: 122%;
+        left: 0%;
+        width: 100%;
+        text-align: center;
+    }
+    .brain_4 {
+        top: 132%;
+        left: 0%;
+        width: 100%;
+        text-align: center;
+    }
+    .brain_5 {
+        top: 142%;
+        left: 0%;
+        width: 100%;
+        text-align: center;
+    }
+    .circle {
+        height: 59vh;
+    }
+    .circle-container {
+        padding-bottom: 16px;
+    }
+
+    /* SECTION 4 */
+    #section4 {
+        padding: 2rem 2rem;
+    }
+    /* SECTION 5 */
+    #section5 {
+        height: 112vh;
+        padding: 2rem 2rem;
+    }
+    .steps_text {
+        padding: 10px 20px;
+    }
+    /* SECTION 6 */
+    #section6 {
+        padding: 2rem;
+    }
+    /* SECTION 7 */
+    #section7 {
+        padding: 2rem;
+    }
+     /* SECTION 8 */
+    #section8 {
+        padding: 2rem;
+    }
+    /* SECTION 9 */
+    #section9 {
+        padding: 2rem;
+    }
+    .card_pink {
+        padding: 2rem 1.8rem;
+    }
+    .question span {
+        padding: 0rem 0rem 1rem 5rem;
+    }
+    .question img {
+        top: 12%;
+        left: 8%;
+    }
+    .container-fluid{
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
