@@ -1,4 +1,3 @@
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .content {
@@ -13,7 +12,7 @@
         font-size: 2.5rem;
     }
 
-    .row > .col-lg-6 {
+    .row>.col-lg-6 {
         padding: 2rem;
     }
 
@@ -68,6 +67,7 @@
     .title {
         padding: 0;
     }
+
     .solution span {
         padding: 1rem 0rem 1rem 4rem;
     }
@@ -75,22 +75,28 @@
     .number {
         left: -6.5%;
     }
+
     .text-overlay {
         left: 50%;
     }
+
     .content {
         padding: 2rem 1rem 0rem;
     }
+
     /* section 1 */
     .header {
         padding: 2rem;
     }
+
     .background-image {
         height: 150vh;
     }
+
     .overlay {
         height: 150vh;
     }
+
     .main-content {
         position: absolute;
         top: 50%;
@@ -99,23 +105,29 @@
         text-align: left;
         width: 100%;
     }
+
     .clm1 {
         padding-left: 8px;
     }
+
     .section1_btm .appointment {
         flex-direction: column;
     }
+
     .section1_btm {
         margin-top: 20px;
     }
+
     .section1_btm .appointment p {
         width: 100%;
         margin: 8px 0px;
     }
+
     .section1_btm .appointment input {
         width: 100%;
         margin: 8px 0px;
     }
+
     .section1_btm .appointment button {
         margin: 8px 0px;
         width: 100%;
@@ -125,52 +137,62 @@
     #section2 {
         padding: 3rem 2rem;
     }
+
     /* SECTION 3 */
     #section3 {
         padding: 2rem;
         height: 110vh;
     }
+
     .column_h1 {
         text-align: justify;
         padding: 0px;
         font-size: 25px;
     }
+
     .column {
         padding: 0px;
     }
+
     .brain_1 {
         top: 102%;
         left: 0%;
         width: 100%;
         text-align: center;
     }
+
     .brain_2 {
         top: 112%;
         left: 0%;
         width: 100%;
         text-align: center;
     }
+
     .brain_3 {
         top: 122%;
         left: 0%;
         width: 100%;
         text-align: center;
     }
+
     .brain_4 {
         top: 132%;
         left: 0%;
         width: 100%;
         text-align: center;
     }
+
     .brain_5 {
         top: 142%;
         left: 0%;
         width: 100%;
         text-align: center;
     }
+
     .circle {
         height: 59vh;
     }
+
     .circle-container {
         padding-bottom: 16px;
     }
@@ -179,43 +201,82 @@
     #section4 {
         padding: 2rem 2rem;
     }
+
     /* SECTION 5 */
     #section5 {
         height: 112vh;
         padding: 2rem 2rem;
     }
+
     .steps_text {
         padding: 10px 20px;
     }
+
     /* SECTION 6 */
     #section6 {
         padding: 2rem;
     }
+
     /* SECTION 7 */
     #section7 {
         padding: 2rem;
     }
-     /* SECTION 8 */
+
+    /* SECTION 8 */
     #section8 {
         padding: 2rem;
     }
+
     /* SECTION 9 */
     #section9 {
         padding: 2rem;
     }
+
     .card_pink {
         padding: 2rem 1.8rem;
     }
+
     .question span {
         padding: 0rem 0rem 1rem 5rem;
     }
+
     .question img {
         top: 12%;
         left: 8%;
     }
-    .container-fluid{
+
+    .container-fluid {
         padding-left: 0px;
         padding-right: 0px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .search-bar .tabs button {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .search-bar .search-input input {
+        padding: 0.5rem;
+    }
+
+    .description h2 {
+        font-size: 1.25rem;
+    }
+
+    .description p {
+        font-size: 0.875rem;
+    }
+
+    .section1_btm .appointment input {
+        padding: 0.25rem;
+    }
+
+    .section1_btm .appointment button {
+        padding: 0.25rem 0.5rem;
     }
 }
 
@@ -235,13 +296,12 @@
     .text-overlay h1 {
         font-size: 2rem;
     }
+
     .footer_logo {
         width: 100%;
     }
+
     .footer_container1 {
         padding: 1.5rem;
     }
 }
-
-
-
